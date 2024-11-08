@@ -1,0 +1,118 @@
+
+body{
+    background-size: cover; 
+    background-position: center 0.01px; 
+    background-repeat: no-repeat; 
+    height: 100%; 
+    margin: 0;
+}
+.audio-container {
+  position: fixed;
+  left: 10px;    /* Khoảng cách từ trái màn hình */
+  bottom: 10px;  /* Khoảng cách từ dưới màn hình */
+  z-index: 1000; /* Đảm bảo loa luôn ở trên cùng */
+}
+
+#volume-control {
+  width: 60px;  /* Kích thước hình ảnh loa */
+  transition: transform 0.3s ease;
+}
+
+/* Khi hover vào hình ảnh loa, tạo hiệu ứng phóng to */
+#volume-control:hover {
+  transform: scale(1.1);
+}
+
+/* Ẩn thanh điều khiển âm thanh mặc định */
+audio {
+  display: none;
+}
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;  /* Chiều cao full màn hình */
+    overflow: hidden;
+  }
+  .video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo video phủ hết khu vực */
+    z-index: -1; /* Đặt video dưới tất cả nội dung */
+  }
+#title{
+  position: absolute;
+  top:7.75%; left:46%;
+  color: rgb(163, 0, 199);
+  font-size: 30px;
+  z-index: 1;
+}
+#title-bg{
+  position: absolute;
+  top:2%; left: 39%;
+  z-index: 0;
+}
+  #option1{
+  position: absolute;
+  bottom: 20%; left: 30%;
+  animation: moveUp1 2s linear forwards;
+}
+#option2{
+  position: absolute;
+  bottom: 20%; left: 55%;
+  animation: moveUp2 2s linear forwards;
+}
+#HoSo{
+  position: absolute; bottom: 0; left: 58.55%;
+  color: black;
+  font-size: 30px;
+  animation: moveUp3 2s linear forwards;
+}
+#HoCa{
+  position: absolute; bottom: 0; left: 33.55%;
+  color: black;
+  font-size: 30px;
+  animation: moveUp4 2s linear forwards;
+}
+#note{
+  position: fixed;
+  left: 60px;    /* Khoảng cách từ trái màn hình */
+  bottom: 10px;  /* Khoảng cách từ dưới màn hình */
+  z-index: 1000;
+  font-size: 20px;
+  color: white;
+}
+@keyframes moveUp1 {
+  0% {
+    bottom: 0;  /* Bắt đầu từ dưới cùng */
+  } 
+  100% {
+    bottom: 20%;  /
+  }
+}
+@keyframes moveUp2 {
+  0% {
+    bottom: 0;  /* Bắt đầu từ dưới cùng */
+  } 
+  100% {
+    bottom: 20%;  /
+  }
+}
+@keyframes moveUp3 {
+  0% {
+    bottom: 0;  /* Bắt đầu từ dưới cùng */
+  } 
+  100% {
+    bottom: 32%;  /
+  }
+}
+@keyframes moveUp4 {
+  0% {
+    bottom: 0;  /* Bắt đầu từ dưới cùng */
+  } 
+  100% {
+    bottom: 32%;  /
+  }
+}
